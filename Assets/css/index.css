@@ -6,8 +6,9 @@ section .cards {
 }
 
 div .card-divider {
-    background-color: #222;
+    background-color: #333;
     color: white;
+    text-shadow: 6px 6px 20px #555;
 }
 .card-section {
     background: #a9c4ec;

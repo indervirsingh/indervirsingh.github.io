@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 .body {
-    background: linear-gradient(to right, rgb(56, 209, 212), #32e4d5);
+    background: linear-gradient(to right, #a9c4ec, #4bcddf);
     color: white;
     font-family: 'Ubuntu', sans-serif;
     font-size: 16pt;
 }
 #left-menu {
-    background-color: #222;
+    background-color: #333;
     box-shadow: 10px 10px 10px rgba(122, 122, 122, 0.8);
-
+}
+#left-menu li a {
+    color: white;
 }
 @media screen and (max-width: 400px) {
     #left-menu {
@@ -17,17 +19,20 @@
     }
 }
 #right-menu {
-    background-color: #32e4d5;
+    background-color: #333;
     box-shadow: 10px 10px 10px rgba(122, 122, 122, 0.8);
     justify-content: space-evenly;
 }
+#right-menu li a {
+    color: tomato;
+}
 #responsive-menu {
-    background: #a9c4ec;
+    /* background: rgb(56, 209, 212); */
     display: flex;
     padding: 0;
 }
 #titleBar {
-    background: #a9c4ec;
+    background: rgb(56, 209, 212);
     display: none;
 }
 .title-bar-title {
@@ -35,4 +40,19 @@
 }
 .menu li {
     font-size: 20pt;
+    background: #333;
+}
+.menu-text {
+    position: static;
+    text-shadow: 6px 6px 20px #222;
+}
+.active-page {
+    background: #222 !important;
+    color: white !important;
+    font-weight: bolder;
+    font-style: italic;
+}
+.inactive-page {
+    background: #333;
+    color: tomato !important;
 }

@@ -3,16 +3,24 @@
 }
 .tabs-panel {
     text-align: center;
-    background: #a9c4ec;
+    background: rgb(56, 209, 212);
     text-shadow: 6px 6px 20px #222;
     margin-bottom: -1px;
 }
 #projects-tabs {
-    background-color: #222;
+    background-color: #333;
     border: none;
 }
 #panel1-label, #panel2-label, #panel3-label, #panel4-label {
     font-size: 12pt;
+    color: tomato;
+}
+ul.tabs li.is-active a {
+    background: #222;
+    text-shadow: 6px 6px 20px #222;
+    color: white !important;
+    font-weight: bolder;
+    font-style: italic;
 }
 .projectPhotos {
     height: 400px;
