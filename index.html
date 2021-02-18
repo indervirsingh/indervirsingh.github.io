@@ -20,17 +20,17 @@
 <body class="body">
 
     <!-- Navbar -->
-    <nav>
+    <nav class="data-sticky-container">
         <div class="title-bar" id="titleBar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
             <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
             <div class="title-bar-title">Menu</div>
         </div>
-        <div class="top-bar" id="responsive-menu">
+        <div class="top-bar" data-sticky data-options="marginTop:0;" style="width:100%" id="responsive-menu">
             <div class="top-bar-left">
                 <ul class="menu" id="left-menu">
                     <li class="menu-text">Indervir Singh</li>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./Assets/html/projects.html">Projects</a></li>
+                    <li class="is-active"><a class="active-page" href="./index.html">Home</a></li>
+                    <li><a class="inactive-page" href="./Assets/html/projects.html">Projects</a></li>
                 </ul>
             </div>
             <div class="top-bar-right">
