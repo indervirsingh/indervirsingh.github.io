@@ -11,6 +11,9 @@
     background-color: #222;
     border: none;
 }
+#panel1-label, #panel2-label, #panel3-label, #panel4-label {
+    font-size: 12pt;
+}
 .projectPhotos {
     height: 400px;
     width: 500px;

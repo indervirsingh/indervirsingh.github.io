@@ -4,11 +4,17 @@
     color: white;
     font-family: 'Ubuntu', sans-serif;
     font-size: 16pt;
-    line-height: 1.5;
 }
 #left-menu {
     background-color: #222;
     box-shadow: 10px 10px 10px rgba(122, 122, 122, 0.8);
+
+}
+@media screen and (max-width: 400px) {
+    #left-menu {
+        display: flex;
+        flex-direction: column;
+    }
 }
 #right-menu {
     background-color: #32e4d5;
@@ -18,6 +24,7 @@
 #responsive-menu {
     background: #a9c4ec;
     display: flex;
+    padding: 0;
 }
 #titleBar {
     background: #a9c4ec;
@@ -25,4 +32,7 @@
 }
 .title-bar-title {
     text-shadow: 6px 6px 20px #444;
+}
+.menu li {
+    font-size: 20pt;
 }
