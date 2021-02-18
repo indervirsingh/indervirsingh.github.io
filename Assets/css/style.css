@@ -12,7 +12,10 @@
 #right-menu {
     background-color: #444;
 }
-
 #responsive-menu {
     background-color: #222;
+}
+img {
+    height: 780px;
+    width: 520px;
 }
