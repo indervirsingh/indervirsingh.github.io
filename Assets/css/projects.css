@@ -1,10 +1,3 @@
-.body {
-    background-color: rgb(56, 209, 212);
-    color: white;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 16pt;
-    line-height: 1.5;
-}
 .projectBackground {
     width:100%;
     height:300px;

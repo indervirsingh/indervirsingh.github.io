@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+.body {
+    background-color: rgb(56, 209, 212);
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16pt;
+    line-height: 1.5;
+}
 #left-menu {
     background-color: #333;
 }
