@@ -1,12 +1,22 @@
 #project-header-text {
     text-align: center;
 }
-.projects {
+.tabs-panel {
     text-align: center;
+    background: #a9c4ec;
+    text-shadow: 6px 6px 20px #222;
+    margin-bottom: -1px;
+}
+#projects-tabs {
+    background-color: #222;
+    border: none;
 }
 .projectPhotos {
     height: 400px;
     width: 500px;
+}
+.cards {
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
 }
 
 

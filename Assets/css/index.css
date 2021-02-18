@@ -5,9 +5,18 @@
     font-size: 16pt;
     line-height: 1.5;
 }
-
 section .cards {
     box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
     text-align: center;
     margin: 1%;
+    border: none;
+}
+
+div .card-divider {
+    background-color: #222;
+    color: white;
+}
+.card-section {
+    background: #a9c4ec;
+    text-shadow: 6px 6px 20px #222;
 }

@@ -1,22 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 .body {
-    background-color: rgb(56, 209, 212);
+    background: linear-gradient(to right, rgb(56, 209, 212), #32e4d5);
     color: white;
     font-family: 'Ubuntu', sans-serif;
     font-size: 16pt;
     line-height: 1.5;
 }
 #left-menu {
-    background-color: #333;
+    background-color: #222;
+    box-shadow: 10px 10px 10px rgba(122, 122, 122, 0.8);
 }
 #right-menu {
-    background-color: #444;
+    background-color: #32e4d5;
+    box-shadow: 10px 10px 10px rgba(122, 122, 122, 0.8);
     justify-content: space-evenly;
 }
 #responsive-menu {
-    background-color: #222;
+    background: #a9c4ec;
     display: flex;
 }
 #titleBar {
+    background: #a9c4ec;
     display: none;
+}
+.title-bar-title {
+    text-shadow: 6px 6px 20px #444;
 }
