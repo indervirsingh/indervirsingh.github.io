@@ -6,128 +6,102 @@
     <title>Indervir Singh</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css">
-    
+    <link rel="stylesheet" href="./Assets/css/index.css">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+
     <!-- Google font: 'JetBrains Mono' -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Foundation -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
 
     <!-- Fontawesome icons -->
     <script src="https://kit.fontawesome.com/810629849b.js" crossorigin="anonymous"></script>
 
 </head>
 <body class="body">
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
-
-        <div class="container">
-            <!-- Brand -->
-            <a class="navbar-brand" href="#"><strong>Indervir Singh</strong></a>
-
-            <!-- Collapse -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Links -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <!-- Left -->
-                <ul class="navbar-nav mr-auto">
-
-                    <!-- Home -->
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./index.html">Home<span class="sr-only"></span>
-                        </a>
-                    </li>
-
-                    <!-- Projects -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="./html/portfolio.html">Portfolio</a>
-                    </li>
-
-                </ul>
-
-                <!-- Right -->
-                <ul class="navbar-nav ms-auto nav-flex-icons">
-
-                    <!-- Contact Me -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="./html/contact.html">Contact Me</a>
-                    </li>
-
-                    <!-- Email -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="mailto:iindervirsingh@gmail.com"><i class="fas fa-envelope"></i></a>
-                    </li>
-
-                    <!-- LinkedIn -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/indervir-singh/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </li>
-
-                    <!-- Facebook -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.facebook.com/indervirsingh95" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                    </li>
-
-                </ul>
-
-
-            </div>
-            <!-- End div class="collapse navbar-collapse" id="navbarSupportedContent" -->
-
+    <nav>
+        <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+            <div class="title-bar-title">Menu</div>
         </div>
-        <!-- End div class="container" -->
-
-    </nav>
-    <!-- End of Navbar -->
-
-    <br>
-
-    <main>
-
-        <div class="container" style="width: 100%;">
-
-            <!-- About me -->
-            <div class="row">
-                <div class="col-sm">
-                    <img src="./Assets/displayPhoto.jpeg" class="photos" alt="indervir-singh-display-photo"/>
-                </div>
-
-                <div class="col-sm">
-                    <h2>A Little Bit About Myself</h2>
-                    <hr>
-                    <p>I love the feeling of excitement that I get when I work with software/technologies that I am unfamiliar with. Things like this use to scare me because I would feel like the absence of knowledge meant that I was incapable, but now I look those situations as a challenge that I will overcome. I strive to learn new things everyday, I want to become the best software developer that I know. The ability to create things with just my computer will never cease to amaze me, whether it's a small program to calculate a sum or a personal webpage. I am always eager to learn more, this drives me to be the best version of myself and I will continue to do so.</p>
-                </div>
+        <div class="top-bar" id="responsive-menu">
+            <div class="top-bar-left">
+                <ul class="menu" id="left-menu">
+                    <li class="menu-text">Indervir Singh</li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./Assets/html/projects.html">Projects</a></li>
+                </ul>
             </div>
+            <div class="top-bar-right">
+                <ul class="menu" id="right-menu">
+                    <li><a href="https://www.github.com/indervirsingh/" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/indervir-singh/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-            <br>
+    <main class="grid-container full">
 
-            <div class="row">
-                <div class="col-sm">
-                    <img src="./Assets/coding.jpg" class="photos" alt="coding-stock-photo"/>
+        <!-- Why-I-Code -->
+        <section class="grid-x align-spaced">
+
+            <img class="card-image small-4 cards" src="./Assets/images/coding.jpg" alt="coding-stock-photo">
+
+            <div class="cards card medium-6">
+
+                <div class="card-divider">
+                    <h2>Why I Code</h2>
                 </div>
 
-                <div class="col-sm">
-                    <h2>Why I Code</h2>
-                    <hr>
+                <div class="card-section">
                     <p>I have been a problem solver ever since I can remember. I took my first programming class in community college and was immediately drawn into the world of tech. I like to create things with code that make life easier, however this isn't limited to software. For example, I live with a young child in my household and she clicks on ads whenever shes using a tablet/smart device and it wouldn't' need help getting back to her original app. To solve this I made a custom DNS server which all the ads on my network are sent, it is basically an AdBlocker for my entire network. This is just one of the ways that I use code/tech as a tool to solve problems.</p>
                 </div>
+
             </div>
+        </section>
+
+        <!-- About Me -->
+        <section class="grid-x align-spaced">
+
+            <img class="card-image small-4 cards" src="./Assets/images/displayPhoto.jpeg" alt="indervir-singh-display-photo"/>
+
+            <div class="cards card medium-6">
+
+                <div class="card-divider">
+                    <h2>A Little Bit About Myself</h2>
+                </div>
+
+                <div class="card-section">
+                    <p>I love the feeling of excitement that I get when I work with software/technologies that I am unfamiliar with. Things like this use to scare me because I would feel like the absence of knowledge meant that I was incapable, but now I look those situations as a challenge that I will overcome. I strive to learn new things everyday, I want to become the best software developer that I know. The ability to create things with just my computer will never cease to amaze me, whether it's a small program to calculate a sum or a personal webpage. I am always eager to learn more, this drives me to be the best version of myself and I will continue to do so.</p>
+                </div>
+
+            </div>
+        </section>
 
 
-        </div>
+
+
+
+
+
+
+
+
+
+
 
     </main>
 
-    <!-- Link for navbar collapse function -->
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script src="./Assets/js/script.js"></script>
 
 </body>
 </html>

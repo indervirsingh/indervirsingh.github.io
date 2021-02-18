@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indervir's Projects</title>
+    <title>Contact Indervir</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
 
     <!-- Google font: 'JetBrains Mono' -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,7 +20,7 @@
     <script src="https://kit.fontawesome.com/810629849b.js" crossorigin="anonymous"></script>
 
 </head>
-<body class="portfolioBody">
+<body class="contactBody">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
@@ -88,59 +89,48 @@
     </nav>
     <!-- End of Navbar -->
 
+    <br>
+
     <main>
+        <div class="container">
 
-        <!-- Projects header/intro -->
-        <header class="projectBackground projectStart">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 projectText">
+            <!-- Contact Form -->
+            <form action="mailto:iindervirsingh@gmail.com" method="POST" enctype="multipart/form-data" id="contact-me">
+                <div class="forms pad">
 
-                        <h1>Indervir's Projects</h1>
-                        <p>This page contains all of my projects.</p>
-
+                    <!-- Name -->
+                    <div class="row">
+                        <div class="form-floating pad">
+                            <input type="text" class="form-control-lg form-control"  id="floatingInput" placeholder="Name">
+                            <label for="floatingInput">Name</label>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </header>
 
-
-        <!-- Projects -->
-        <section>
-            <div class="container" style="position: relative; top: 55%; left: 1%">
-
-                <!-- Weather App -->
-                <div class="row projects">
-
-                    <a href="https://github.com/indervirsingh/WeatherApp" target="_blank"><img class="projectPhotos" src="../Assets/weatherAppScreenshot.png" alt="weatherApp-screenshot"></a>
-                    <p>This weather app has a simple design, and fast search, all while utilizing the OpenWeatherApp API.</p>
-
-                </div>
-
-                <!-- Horiseon Refactor -->
-                <div class="row projects">
-                    <div class="col-sm col-md col-lg">
-
-                        <a href="https://github.com/indervirsingh/HoriseonRefactor" target="_blank"><img class="projectPhotos" src="../Assets/horiseonScreenshot.png" alt="horiseon-screenshot"></a>
-                        <p>This is a refactoring of a webpage featuring Horiseon. I was given starter code, and edited the code to make it more readable and optimized for future use.</p>
-
+                    <!-- Email Address -->
+                    <div class="row">
+                        <div class="form-floating pad">
+                            <input type="email" class="form-control-lg form-control" id="floatingInput" placeholder="youremail@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
                     </div>
+
+                    <!-- Message -->
+                    <div class="form-floating">
+                        <textarea class="form-control-lg form-control" id="floatingTextArea" placeholder="Message"  style="height: 35%;"></textarea>
+                        <label for="floatingTextArea">Message</label>
+                    </div>
+
+                    <!-- Send Button -->
+                    <button class="btn btn-primary" type="submit" style="border: none; margin-top: 5px; background-color: #55acee" form="contactme" value="Submit">
+                        <i class="far fa-envelope"></i> Send
+                    </button>
                 </div>
+            </form>
+            <!-- End Contact Form -->
 
-                <!-- Pre-Work About Me -->
-                <div class="row projects">
-
-                    <a href="https://github.com/indervirsingh/prework-about-me" target="_blank" alt="prework-about-me-screenshot"><img class="projectPhotos" src="../Assets/preworkScreenshot.png" alt=""></a>
-                    <p>This repo contains a small about me page. One of my firsts, but it shows my ability to fork a repo, and create simple webpage with html/css.</p>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End Projects -->
-
+        </div>
     </main>
-
+        
 </body>
 
     <!-- Link for navbar collapse function -->

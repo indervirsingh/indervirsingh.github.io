@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indervir's Projects</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projects.css">
+
+    <!-- Google font: 'JetBrains Mono' -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+    <!-- Foundation -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/810629849b.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="body">
+
+    <!-- Navbar -->
+    <nav>
+        <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="responsive-menu">
+            <div class="top-bar-left">
+                <ul class="menu" id="left-menu">
+                    <li class="menu-text">Indervir Singh</li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a>Projects</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu" id="right-menu">
+                    <li><a href="https://www.github.com/indervirsingh/" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/indervir-singh/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="grid-container full">
+
+        <!-- Projects header/intro -->
+        <header class="callout success large" id="project-header-text">
+            <h1>Indervir's Projects</h1>
+            <p>This page contains all of my projects.</p>
+        </header>
+
+
+        <!-- Projects container -->
+        <div class="grid-y" style="border-style: dashed;">
+
+            <!-- Project tabs -->
+            <ul class="tabs" data-tabs id="projects-tabs">
+                <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Weather App</a></li>
+                <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Horiseon Refactor</a></li>
+            </ul>
+
+            <br>
+
+            <!-- Projects -->
+            <div class="tabs-content projects" data-tabs-content="projects-tabs">
+                <div class="tabs-panel is-active" id="panel1">
+                    <a href="https://github.com/indervirsingh/WeatherApp" target="_blank"><img class="projectPhotos" src="../images/weatherAppScreenshot.png" alt="weatherApp-screenshot"></a>
+                    <p>This weather app has a simple design, and fast search, all while utilizing the OpenWeatherApp API.</p>
+                </div>
+                <div class="tabs-panel" id="panel2">
+                    <a href="https://github.com/indervirsingh/HoriseonRefactor" target="_blank"><img class="projectPhotos" src="../images/horiseonScreenshot.png" alt="horiseon-screenshot"></a>
+                    <p>This is a refactoring of a webpage featuring Horiseon. I was given starter code, and edited the code to make it more readable and optimized for future use.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Link for navbar collapse function -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

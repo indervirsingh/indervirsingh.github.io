@@ -1,0 +1,22 @@
+.contactBody {
+    background-image: url(../Assets/contact-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #222;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16pt;
+    line-height: 1.5;
+}
+.forms {
+    background-color: white;
+    opacity: 0.8;
+    position: absolute;
+    top: 35%;
+    left: 12%;
+    width: 75%;
+    height: max-content;
+    border: solid #222 1px;
+}
+.pad {
+    padding: 10px 10px 10px 10px;
+}

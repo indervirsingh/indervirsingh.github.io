@@ -1,0 +1,28 @@
+.body {
+    background-color: rgb(56, 209, 212);
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16pt;
+    line-height: 1.5;
+}
+.projectBackground {
+    width:100%;
+    height:300px;
+    background-color: #222;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#project-header-text {
+    text-align: center;
+}
+.projects {
+    text-align: center;
+}
+.projectPhotos {
+    width: 50%;
+    height: auto;
+}
+
+
