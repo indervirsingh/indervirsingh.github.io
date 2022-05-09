@@ -1,115 +1,317 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" class="sr">
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="mobile-web-app-capable" content="yes">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png">
 
-  <title>
-    
-    Indervir Singh | Professional Portfolio
-  </title>
+    <title>Indervir Singh | Software Developer</title>
+    <meta name="keywords" content="indervirsingh, Indervir Singh, javascript, C++, java, swift">
+    <meta name="description" content="Indervir Singh | Software Developer">
 
-  <!-- Load Javascript and CSS for Semantic UI -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="/template/css/semantic-ui/semantic.min.js"></script>
-  <link rel="stylesheet" href="/template/css/semantic-ui/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer="" src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
-  <!-- Load Techfolio CSS customizations -->
-  <link rel="stylesheet" type="text/css" href="/template/css/stylesheet-default.css">
-  <link rel="stylesheet" type="text/css" href="/template/css/stylesheet-customizations.css">
-
-  <link rel="stylesheet" type="text/css" href="/template/css/print-default.css" media="print">
-  <link rel="stylesheet" type="text/css" href="/template/css/print-customizations.css" media="print">
-
-
-  <link rel="stylesheet" type="text/css" href="/template/css/rouge/igorpro.css">
-
-
-
-</head>
-
+  </head>
 
   <body>
-    <!-- Home page design with small circular image bisecting card. -->
+    <div id="top"></div>
 
+    <!-- **** Hero Section **** -->
+    <section id="hero" class="jumbotron">
+      <div class="container">
+        <h1 class="hero-title load-hidden">
+          Hi, my name is <span class="text-color-main">Indervir Singh</span>
+          <br>
+          I'm a Software Developer.
+        </h1>
+        <p class="hero-cta load-hidden">
+          <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about">Know more</a>
+        </p>
+      </div>
+    </section>
+    <!-- /END Hero Section -->
 
-
-
-
-
-<div style="height: 100%; margin-top: -75px" class="ui middle aligned grid ">
-
-  <div class="column">
-
-    <div style="position: relative; top: 75px; z-index: 1" class="ui fluid centered small circular image">
-      <img src="https://techfolios.github.io/template/images/molly.png">
-    </div>
-
-
-    <div style="max-width: 500px; padding-top: 75px; margin-top: 0px" class="ui fluid centered card">
-
-      <div class="center aligned content">
-        <span class="header">Indervir Singh</span>
-        <div class="meta">
-          <span class="date">Software Developer</span>
+    <!-- **** About Section **** -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title load-hidden">About me</h2>
+        <div class="row about-wrapper">
+          <div class="col-md-6 col-sm-12">
+            <div class="about-wrapper__image load-hidden">
+              <img alt="Profile Image" class="img-fluid rounded shadow-lg" height="auto" width="300px" src="./assets/images/profile.jpg">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="about-wrapper__info load-hidden">
+              <p class="about-wrapper__info-text">
+                I am a confident and kind individual, I lift others up without bringing others down :) <br> <br>
+                I practice mindfulness and am always aware of my peers, I am a loyal person to my close friends and family (small circle / quality > quantity) <br> <br>
+                My path has been different but that does not make me worse or better because of it, I view and treat everyone with respect and believe everyone should do the same. <br> <br>
+                I consider myself a role model to my baby cousin and younger brother but I am humble as well, I admit my mistakes because I truly want to grow and become the best I will be.
+                I come from a small family, growing up with a single mother and one younger brother has made me strong. Everything I do is for them and myself (gamer nerd needs $$ for games) <br> <br>
+              </p>
+              <p class="about-wrapper__info-text">
+                My goal is to create software that aligns with my views, I will continue to do so for my entire life (keeps my mind SHARP).
+              </p>
+              <span class="d-flex mt-3">
+                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="./assets/resume.pdf">
+                  View Resume
+                </a>
+              </span>
+            </div>
+          </div>
         </div>
-        <div class="left aligned description">
-          I am a software developer (Full Stack/iOS/etc.). I develop websites, iOS apps, and everyday-use programs :)
+      </div>
+    </section>
+    <!-- /END About Section -->
+
+    <!-- **** Projects Section **** -->
+    <section id="projects">
+      <div class="container">
+        <div class="project-wrapper">
+          <h2 class="section-title dark-blue-text">Projects</h2>
+
+          <!-- Web Dev Redemption-->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Web Dev Redemption</h3>
+                <div>
+                  <p class="mb-4">
+                    This is the first group project that our bootcamp cohort worked on together. It was an assignment to create an application in teams of four or so. <br>
+
+                    It was a great experience and we learned so much together! <br><br>
+
+                    Our team members on this project were: <br>
+
+                    Indervir Singh (Myself) <br>
+
+                    <a href="https://github.com/larrygjenkins">Larry Jenkins</a> <br>
+
+                    <a href="https://github.com/MWebb2321">Matthew Webb</a> <br>
+
+                    <a href="https://github.com/Aereisdin">Kiel Sprague</a> <br> <br>
+
+
+                    <b>Requirements/Tools:</b><br>
+                    - Javascript, HTML, CSS <br>
+                    - GitHub <br>
+                    - Internet access & computer with VSCode <br>
+
+                  </p>
+                </div>
+                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="https://indervirsingh.github.io/teamAwesome/">
+                  See Live
+                </a>
+                <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="https://github.com/indervirsingh/teamAwesome">
+                  Source Code
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="#!" target="_blank">
+                  <div data-tilt="" data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+                    <img alt="Project Image" class="img-fluid" src="./assets/images/web_dev_redemption.png">
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- DNS Blocker -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">DNS Blocker</h3>
+                <div>
+                  <p class="mb-4">
+                    This is a home-made ad blocker which uses a raspberry pi as the server (pi-hole FTW). <br> <br>
+                    The adblockers on browsers are fine but don't work for mobile applications,
+                    I made this for my home network when I noticed my little cousin would constantly exit candy crush because she clicked an ad.
+                    So after getting tired of constantly having to exit the 10 ads she clicked every 5 minutes, I decided to solve her problem :) <br> <br>
+                    I am not a hardware engineer, so tinkering with the pi was intimidating but was extremely fun and inspired me to make a magic mirror. (in progress) <br> <br>
+
+                    <b>Requirements/Tools:</b><br>
+                    - SD card (for Linux OS) <br>
+                    - Pi-Hole Software <br>
+                    - Access to network/router<br>
+                    - Programming/Linux directory knowledge<br>
+                    - Raspberry Pi <br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="#!" target="_blank">
+                  <div data-tilt="" data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+                    <img alt="Project Image" class="img-fluid" src="./assets/images/dns_blocker.png" height="1261">
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- Recipe App (iOS) -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Recipe App</h3>
+                <div>
+                  <p class="mb-4">
+                    (IN PROGRESS - 75%)
+                  </p>
+                </div>
+                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="#!">
+                  See Live
+                </a>
+                <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">
+                  Source Code
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="#!" target="_blank">
+                  <div data-tilt="" data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+                    <img alt="Project Image" class="img-fluid" src="./assets/images/in_progress.jpg">
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- 916cuts -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">916cuts</h3>
+                <div>
+                  <p class="mb-4">
+                    (IN PROGRESS - 10%)
+                  </p>
+                </div>
+                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="#!">
+                  See Live
+                </a>
+                <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">
+                  Source Code
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="#!" target="_blank">
+                  <div data-tilt="" data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+                    <img alt="Project Image" class="img-fluid" src="./assets/images/in_progress.jpg">
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- Template for new project
+
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Recipe App</h3>
+                <div>
+                  <p class="mb-4">
+                    (IN PROGRESS - 75%)
+                  </p>
+                </div>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--hero"
+                  href="#!"
+                >
+                  See Live
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn text-color-main"
+                  href="#!"
+                >
+                  Source Code
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="#!" target="_blank">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <img
+                      alt="Project Image"
+                      class="img-fluid"
+                      src="assets/in_progress.jpg"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project 
+        -->
+
+      </div>
+      </div>
+    </section>
+    <!-- /END Projects Section -->
+
+    <!-- **** Contact Section **** -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-wrapper load-hidden">
+          <p class="contact-wrapper__text">Send me an email, I am friendly :)</p>
+          <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="mailto:indervirsingh@protonmail.com">Call to Action</a>
         </div>
       </div>
-      <div class="center aligned content">
-        <div class="description">
-          Interests:
-          
-            creating software for everyday-use, 
-          
-            programming for good (opposed to evil), 
-          
-            nature and fitness (mental & physical)
-          
+    </section>
+    <!-- /END Contact Section -->
 
+    <!-- **** Footer Section **** -->
+    <footer class="footer navbar-static-bottom">
+      <div class="container">
+        <a rel="noreferrer" href="#top" class="back-to-top">
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+        </a>
+        <div class="social-links">
+          <a rel="noreferrer" href="https://www.instagram.com/indervir_singh/" target="_blank">
+            <i class="fa fa-instagram fa-inverse"></i>
+          </a>
+          <a rel="noreferrer" href="https://www.linkedin.com/in/indervir-singh/" target="_blank">
+            <i class="fa fa-linkedin fa-inverse"></i>
+          </a>
+          <a rel="noreferrer" href="https://www.github.com/indervirsingh/" target="_blank">
+            <i class="fa fa-github fa-inverse"></i>
+          </a>
         </div>
-      </div>
-      <div class="center aligned extra content">
 
+        <hr>
 
-   <a href="http://github.com/changeme"> <i class="big github icon icon-color"></i> </a>
-
-   <a href="http://linkedin.com/in/changeme"> <i class="big linkedin icon icon-color"></i> </a>
-
-   <a href="http://twitter.com/changeme"> <i class="big twitter icon icon-color"></i> </a>
-
-   <a href="http://instagram.com/changeme"> <i class="big instagram icon icon-color"></i> </a>
-
-
-
-  <a href="mailto:indervirsingh@protonmail.com"> <i class="big mail square icon icon-color"></i> </a>
 
       </div>
-      <div class="center aligned content">
-        <a href="/template/projects/">
-          <button class="ui basic button">Projects (3)</button>
-        </a>
-        <a href="/template/essays/">
-          <button class="ui basic button">Essays (3)</button>
-        </a>
-        <a href="/template/bio/">
-          <button class="ui basic button">Resume</button>
-        </a>
-      </div>
-    </div>
-  </div>
+    </footer>
+    <!-- /END Footer Section -->
 
-</div>
-
-<script>
-  $('.ui.embed').embed();
-</script>
-
-
+    <script defer="" src="./assets/js/index.js"></script>
   </body>
-
 </html>
