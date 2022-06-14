@@ -1,0 +1,3 @@
+MATH    |   What is the square root of 64?
+ENGLISH |   How many letters are in the English alphabet?
+SCIENCE |   What is the first element of the periodic table?
