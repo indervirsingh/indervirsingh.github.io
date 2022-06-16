@@ -45,17 +45,17 @@ body .container .card .face.face1 h2 {
   margin: 0;
   padding: 0;
 }
-body .container .card .face.face1 .math-question {
+body .container .card .face.face1 .math {
   background-color: #fffc00;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-body .container .card .face.face1 .english-question {
+body .container .card .face.face1 .english {
   background-color: #00fffc;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-body .container .card .face.face1 .science-question {
+body .container .card .face.face1 .science {
   background-color: #fc00ff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -93,6 +93,6 @@ body .container .card:nth-child(3) .face.face2 {
 
 
 
-#math, #english, #science {
+#math-title, #english-title, #science-title {
   font-size: 4.5rem;
 }
