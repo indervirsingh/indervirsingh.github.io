@@ -51,7 +51,7 @@ body .container .card .face.face1 .math {
   -webkit-text-fill-color: transparent;
 }
 body .container .card .face.face1 .english {
-  background-color: #00fffc;
+  background-color: #5ecb46;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -93,6 +93,15 @@ body .container .card:nth-child(3) .face.face2 {
 
 
 
-#math-title, #english-title, #science-title {
+#math-title{
   font-size: 4.5rem;
+  color: darkred;
+} 
+#english-title {
+  font-size: 4.5rem;
+  color: darkgreen;
+}
+#science-title {
+  font-size: 4.5rem;
+  color: darkblue;
 }
