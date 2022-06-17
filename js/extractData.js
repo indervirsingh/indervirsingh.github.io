@@ -25,5 +25,4 @@ fs.readFile(url, 'utf-8', (err, data) => {
     const science_questions = [s1]
 
 
-
 })

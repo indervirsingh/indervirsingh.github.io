@@ -11,6 +11,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/gamesPage.css">
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
 </head>
 <body>
 
@@ -37,19 +40,20 @@
         <!-- Game-Questions -->
         <div class="container">
 
-          <!-- Method to extract data from txt file -->
+          <!-- Method to extract data from json -->
+
 
 
           <div class="card">
             <div class="face face1">
               <div class="content">
-                <span class="stars"></span>
+                <span id="math-question" class="stars"></span>
                 <!-- <h2 class="math">M A T H</h2> -->
-                <p class="math math-question">What is the square root of 144?</p>
+                <!-- <p class="math math-question">What is the square root of 144?</p> -->
                   <ul class="math math-options">
-                    <li><button class="button secondary"><span class="math">36</span></button></li>
+                    <!-- <li><button class="button secondary"><span class="math">36</span></button></li>
                     <li><button class="button secondary"><span class="math">24</span></button></li>
-                    <li><button class="button secondary"><span class="math">12</span></button></li>
+                    <li><button class="button secondary"><span class="math">12</span></button></li> -->
                   </ul>
               </div>
             </div>
@@ -61,13 +65,13 @@
           <div class="card">
             <div class="face face1">
               <div class="content">
-                <span class="stars"></span>
+                <span id="english-question" class="stars"></span>
                 <!-- <h2 class="english">E N G L I S H</h2> -->
-                <p class="english english-question">How many letters are in the English alphabet?</p>
+                <!-- <p class="english english-question">How many letters are in the English alphabet?</p> -->
                   <ul class="english english-options">
-                    <li><button class="button secondary"><span class="english">24</span></button></li>
+                    <!-- <li><button class="button secondary"><span class="english">24</span></button></li>
                     <li><button class="button secondary"><span class="english">27</span></button></li>
-                    <li><button class="button secondary"><span class="english">26</span></button></li>
+                    <li><button class="button secondary"><span class="english">26</span></button></li> -->
                   </ul>
               </div>
             </div>
@@ -79,13 +83,13 @@
           <div class="card">
             <div class="face face1">
               <div class="content">
-                <span class="stars"></span>
+                <span id="science-question" class="stars"></span>
                 <!-- <h2 class="science">S C I E N C E</h2> -->
-                <p class="science science-question">What is the first element of the periodic table?</p>
+                <!-- <p class="science science-question">What is the first element of the periodic table?</p> -->
                   <ul class="science science-options">
-                    <li><button class="button secondary"><span class="science">Helium</span></button></li>
+                    <!-- <li><button class="button secondary"><span class="science">Helium</span></button></li>
                     <li><button class="button secondary"><span class="science">Hydrogen</span></button></li>
-                    <li><button class="button secondary"><span class="science">Potassium</span></button></li>
+                    <li><button class="button secondary"><span class="science">Potassium</span></button></li> -->
                   </ul>
               </div>
             </div>
@@ -95,6 +99,78 @@
           </div>
 
         </div>
+
+
+        <script>
+          $(document).ready(function() {
+
+            // Fetch data from JSON file
+            $.getJSON("questions.json",
+                      function(data) {
+
+                        // Extract data/questions into variables
+                        const {
+                          MATH: [m1, m2, m3],
+                          ENGLISH: [e1],
+                          SCIENCE: [s1]
+                        } = data
+
+                        // Store questions into separate arrays
+                        const math_questions = [m1, m2, m3]
+                        const english_questions = [e1]
+                        const science_questions = [s1]
+
+
+                        // question elements
+                        const math_question = `<p class=\"math math-question\">${m1.question}</p>`
+                        const english_question = `<p class=\"english english-question\">${e1.question}</p>`
+                        const science_question = `<p class=\"science science-question\">${s1.question}</p>`
+
+                        // option elements
+                        const math_option_1 = ` <li><button class=\"button secondary\"><span class=\"math\">${m1.choices.A}</span></button></li>`
+                        const math_option_2 = ` <li><button class=\"button secondary\"><span class=\"math\">${m1.choices.B}</span></button></li>`
+                        const math_option_3 = ` <li><button class=\"button secondary\"><span class=\"math\">${m1.choices.C}</span></button></li>`
+
+                        const english_option_1 = ` <li><button class=\"button secondary\"><span class=\"english\">${e1.choices.A}</span></button></li>`
+                        const english_option_2 = ` <li><button class=\"button secondary\"><span class=\"english\">${e1.choices.B}</span></button></li>`
+                        const english_option_3 = ` <li><button class=\"button secondary\"><span class=\"english\">${e1.choices.C}</span></button></li>`
+                        
+                        const science_option_1 = `<li><button class=\"button secondary\"><span class=\"science\">${s1.choices.A}</span></button></li>`
+                        const science_option_2 = `<li><button class=\"button secondary\"><span class=\"science\">${s1.choices.B}</span></button></li>`
+                        const science_option_3 = `<li><button class=\"button secondary\"><span class=\"science\">${s1.choices.C}</span></button></li>`
+
+                        // answer elements
+                        const math_answer = '' 
+                        const english_answer = ''
+                        const science_answer = ''
+
+
+
+
+                        // Append elements to HTML
+
+                        $('.math-options').append(math_option_1)
+                        $('.math-options').append(math_option_2)
+                        $('.math-options').append(math_option_3)
+
+                        $('.english-options').append(english_option_1)
+                        $('.english-options').append(english_option_2)
+                        $('.english-options').append(english_option_3)
+
+                        $('.science-options').append(science_option_1)
+                        $('.science-options').append(science_option_2)
+                        $('.science-options').append(science_option_3)
+
+                        $('#math-question').append(math_question)
+                        $('#english-question').append(english_question)
+                        $('#science-question').append(science_question)
+
+
+                      });
+
+
+          })
+        </script>
 
 
 
