@@ -101,6 +101,7 @@
         <!-- Extract data from JSON file and add to the game-questions container -->
         <script>
           $(document).ready(function() {
+            
 
             // Fetch data from JSON file
             $.getJSON("questions.json",
@@ -125,17 +126,17 @@
                         const science_question = `<p class=\"science science-question\">${s1.question}</p>`
 
                         // option elements
-                        const math_option_1 = ` <li><button class=\"button secondary\"><span class=\"math\">${m1.choices.A}</span></button></li>`
-                        const math_option_2 = ` <li><button class=\"button secondary\"><span class=\"math\">${m1.choices.B}</span></button></li>`
-                        const math_option_3 = ` <li><button class=\"button secondary\"><span class=\"math\">${m1.choices.C}</span></button></li>`
+                        const math_option_1 = ` <li><button onclick=\"confirmChoice(this)\" class=\"button secondary\"><span class=\"math\">${m1.choices.A}</span></button></li>`
+                        const math_option_2 = ` <li><button onclick=\"confirmChoice(this)\" class=\"button secondary\"><span class=\"math\">${m1.choices.B}</span></button></li>`
+                        const math_option_3 = ` <li><button onclick=\"confirmChoice(this)\" class=\"button secondary\"><span class=\"math\">${m1.choices.C}</span></button></li>`
 
-                        const english_option_1 = ` <li><button class=\"button secondary\"><span class=\"english\">${e1.choices.A}</span></button></li>`
-                        const english_option_2 = ` <li><button class=\"button secondary\"><span class=\"english\">${e1.choices.B}</span></button></li>`
-                        const english_option_3 = ` <li><button class=\"button secondary\"><span class=\"english\">${e1.choices.C}</span></button></li>`
+                        const english_option_1 = ` <li><button onclick=\"confirmChoice(this)\" class=\"button secondary\"><span class=\"english\">${e1.choices.A}</span></button></li>`
+                        const english_option_2 = ` <li><button onclick=\"confirmChoice(this)\" class=\"button secondary\"><span class=\"english\">${e1.choices.B}</span></button></li>`
+                        const english_option_3 = ` <li><button onclick=\"confirmChoice(this)\" class=\"button secondary\"><span class=\"english\">${e1.choices.C}</span></button></li>`
                         
-                        const science_option_1 = `<li><button class=\"button secondary\"><span class=\"science\">${s1.choices.A}</span></button></li>`
-                        const science_option_2 = `<li><button class=\"button secondary\"><span class=\"science\">${s1.choices.B}</span></button></li>`
-                        const science_option_3 = `<li><button class=\"button secondary\"><span class=\"science\">${s1.choices.C}</span></button></li>`
+                        const science_option_1 = `<li><button onclick=\"confirmChoice(this)\" class=\"button secondary\"><span class=\"science\">${s1.choices.A}</span></button></li>`
+                        const science_option_2 = `<li><button onclick=\"confirmChoice(this)\" class=\"button secondary\"><span class=\"science\">${s1.choices.B}</span></button></li>`
+                        const science_option_3 = `<li><button onclick=\"confirmChoice(this)\" class=\"button secondary\"><span class=\"science\">${s1.choices.C}</span></button></li>`
 
                         // answer elements
                         const math_answer = ` ${m1.correct_answer}`
@@ -178,5 +179,6 @@
 
     <!-- Foundation JS -->
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
 </body>
 </html>
