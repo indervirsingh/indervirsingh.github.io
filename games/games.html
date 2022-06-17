@@ -40,9 +40,6 @@
         <!-- Game-Questions -->
         <div class="container">
 
-          <!-- Method to extract data from json -->
-
-
 
           <div class="card">
             <div class="face face1">
@@ -101,6 +98,7 @@
         </div>
 
 
+        <!-- Extract data from JSON file and add to the game-questions container -->
         <script>
           $(document).ready(function() {
 
@@ -140,9 +138,9 @@
                         const science_option_3 = `<li><button class=\"button secondary\"><span class=\"science\">${s1.choices.C}</span></button></li>`
 
                         // answer elements
-                        const math_answer = '' 
-                        const english_answer = ''
-                        const science_answer = ''
+                        const math_answer = ` ${m1.correct_answer}`
+                        const english_answer = ` ${e1.correct_answer}` 
+                        const science_answer = ` ${s1.correct_answer}`
 
 
 
