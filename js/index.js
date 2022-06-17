@@ -950,3 +950,10 @@ const targetElements = [
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["lBB98","hD4hw"], "hD4hw", "parcelRequire6aa4")
 
+
+
+// confirm button
+function confirmChoice (buttonElement ) {
+    // Change the selected button to RED
+    buttonElement.classList.add("alert")
+}
