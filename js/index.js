@@ -959,8 +959,14 @@ function confirmChoice (buttonPressed) {
     var englishButtons = document.querySelectorAll(".english-buttons")
     var scienceButtons = document.querySelectorAll(".science-buttons")
 
+    
     // TODO: create function to clear buttons and replace conditionals
-    if (buttonPressed.classList.contains("math-buttons")) {
+    if (buttonPressed.classList.contains("alert")) {
+        buttonPressed.classList.remove("alert")
+        buttonPressed.classList.add("clear")
+    }
+    else if (buttonPressed.classList.contains("math-buttons")) {
+
 
         // First clear other buttons, then toggle the pressed button
         for (let i = 0; i < mathButtons.length; i++) {
@@ -977,8 +983,7 @@ function confirmChoice (buttonPressed) {
 
 
     }
-
-    if (buttonPressed.classList.contains("english-buttons")) {
+    else if (buttonPressed.classList.contains("english-buttons")) {
 
         for (let i = 0; i < englishButtons.length; i++) {
             englishButtons[i].classList.add("clear")
@@ -993,8 +998,7 @@ function confirmChoice (buttonPressed) {
 
         
     }
-
-    if (buttonPressed.classList.contains("science-buttons")) {
+    else if (buttonPressed.classList.contains("science-buttons")) {
 
         for (let i = 0; i < scienceButtons.length; i++) {
             scienceButtons[i].classList.add("clear")
