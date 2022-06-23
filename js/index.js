@@ -964,10 +964,12 @@ function confirmChoice (buttonPressed) {
 
         // First clear other buttons, then toggle the pressed button
         for (let i = 0; i < mathButtons.length; i++) {
+            mathButtons[i].classList.add("clear")
             mathButtons[i].classList.remove("alert")
         }
 
         // toggle the selected button
+        buttonPressed.classList.toggle("clear")
         buttonPressed.classList.toggle("alert")
 
         // Enable confirm button
@@ -979,9 +981,11 @@ function confirmChoice (buttonPressed) {
     if (buttonPressed.classList.contains("english-buttons")) {
 
         for (let i = 0; i < englishButtons.length; i++) {
+            englishButtons[i].classList.add("clear")
             englishButtons[i].classList.remove("alert")
         }
         // toggle the selected button
+        buttonPressed.classList.toggle("clear")
         buttonPressed.classList.toggle("alert")
 
         // Enable confirm button
@@ -993,9 +997,11 @@ function confirmChoice (buttonPressed) {
     if (buttonPressed.classList.contains("science-buttons")) {
 
         for (let i = 0; i < scienceButtons.length; i++) {
+            scienceButtons[i].classList.add("clear")
             scienceButtons[i].classList.remove("alert")
         }
         // toggle the selected button
+        buttonPressed.classList.toggle("clear")
         buttonPressed.classList.toggle("alert")
 
         // Enable confirm button
