@@ -954,16 +954,22 @@ const targetElements = [
 // confirm button
 function confirmChoice (buttonPressed) {
     
-    // Math buttons
+    // choices buttons
     var mathButtons = document.querySelectorAll(".math-buttons")
     var englishButtons = document.querySelectorAll(".english-buttons")
     var scienceButtons = document.querySelectorAll(".science-buttons")
+
+    // confirm buttons
+    var confirm_math = document.querySelector("#confirm-math")
+    var confirm_english = document.querySelector("#confirm-english")
+    var confirm_science = document.querySelector("#confirm-science")
 
     
     // TODO: create function to clear buttons and replace conditionals
     if (buttonPressed.classList.contains("alert")) {
         buttonPressed.classList.remove("alert")
         buttonPressed.classList.add("clear")
+        
     }
     else if (buttonPressed.classList.contains("math-buttons")) {
 
@@ -979,7 +985,9 @@ function confirmChoice (buttonPressed) {
         buttonPressed.classList.toggle("alert")
 
         // Enable confirm button
-        document.querySelector("#confirm-math").toggleAttribute("disabled")
+        if (buttonPressed.classList.contains("alert")) {
+            confirm_math.toggleAttribute("disabled")
+        }
 
 
     }
@@ -994,7 +1002,9 @@ function confirmChoice (buttonPressed) {
         buttonPressed.classList.toggle("alert")
 
         // Enable confirm button
-        document.querySelector("#confirm-english").toggleAttribute("disabled")
+        if (buttonPressed.classList.contains("alert")) {
+            confirm_english.toggleAttribute("disabled")
+        }
 
         
     }
@@ -1009,7 +1019,9 @@ function confirmChoice (buttonPressed) {
         buttonPressed.classList.toggle("alert")
 
         // Enable confirm button
-        document.querySelector("#confirm-science").toggleAttribute("disabled")
+        if (buttonPressed.classList.contains("alert")) {
+            confirm_science.toggleAttribute("disabled")
+        }
 
         
     }
