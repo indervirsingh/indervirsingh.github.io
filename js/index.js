@@ -951,11 +951,63 @@ const targetElements = [
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["lBB98","hD4hw"], "hD4hw", "parcelRequire6aa4")
 
 
-
 // confirm button
-function confirmChoice (buttonElement ) {
-    // Change the selected button to RED
-    buttonElement.classList.toggle("alert")
+function confirmChoice (buttonPressed) {
+    
+    // Math buttons
+    var mathButtons = document.querySelectorAll(".math-buttons")
+    var englishButtons = document.querySelectorAll(".english-buttons")
+    var scienceButtons = document.querySelectorAll(".science-buttons")
+
+    // TODO: create function to clear buttons and replace conditionals
+    if (buttonPressed.classList.contains("math-buttons")) {
+
+        // First clear other buttons, then toggle the pressed button
+        for (let i = 0; i < mathButtons.length; i++) {
+            mathButtons[i].classList.remove("alert")
+        }
+
+        // toggle the selected button
+        buttonPressed.classList.toggle("alert")
+
+        // Enable confirm button
+        document.querySelector("#confirm-math").toggleAttribute("disabled")
+
+
+    }
+
+    if (buttonPressed.classList.contains("english-buttons")) {
+
+        for (let i = 0; i < englishButtons.length; i++) {
+            englishButtons[i].classList.remove("alert")
+        }
+        // toggle the selected button
+        buttonPressed.classList.toggle("alert")
+
+        // Enable confirm button
+        document.querySelector("#confirm-english").toggleAttribute("disabled")
+
+        
+    }
+
+    if (buttonPressed.classList.contains("science-buttons")) {
+
+        for (let i = 0; i < scienceButtons.length; i++) {
+            scienceButtons[i].classList.remove("alert")
+        }
+        // toggle the selected button
+        buttonPressed.classList.toggle("alert")
+
+        // Enable confirm button
+        document.querySelector("#confirm-science").toggleAttribute("disabled")
+
+        
+    }
+
+
+
+
+
 }
 
 $(document).foundation();
