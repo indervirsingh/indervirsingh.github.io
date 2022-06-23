@@ -1065,6 +1065,18 @@ function confirm_answer (category) {
     }
 
 
+
+    // if all buttons are confirmed then check answers
+    if (confirm_math_button.hasAttribute("disabled") && confirm_english_button.hasAttribute("disabled") && confirm_science_button.hasAttribute("disabled")) {
+        check_answers()
+    }
+
+
+}
+
+// check answers
+function check_answers () {
+
 }
 
 
