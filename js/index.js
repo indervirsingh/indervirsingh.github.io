@@ -955,5 +955,7 @@ const targetElements = [
 // confirm button
 function confirmChoice (buttonElement ) {
     // Change the selected button to RED
-    buttonElement.classList.add("alert")
+    buttonElement.classList.toggle("alert")
 }
+
+$(document).foundation();
