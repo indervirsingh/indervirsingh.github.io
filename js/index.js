@@ -951,18 +951,28 @@ const targetElements = [
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["lBB98","hD4hw"], "hD4hw", "parcelRequire6aa4")
 
 
-// confirm button
-function confirmChoice (buttonPressed) {
-    
+// VARIABLES --------------------------------
+
+// var confirm_math_button = $("#confirm-math")
+// var confirm_english_button = $("#confirm-english")
+// var science = $("#confirm-science")
+
+
+
+// Functions ----------------------------------
+
+// select answer
+function select_answer (buttonPressed) {
     // choices buttons
-    var mathButtons = document.querySelectorAll(".math-buttons")
-    var englishButtons = document.querySelectorAll(".english-buttons")
-    var scienceButtons = document.querySelectorAll(".science-buttons")
+    var mathButtons = $(".math-buttons")
+    var englishButtons = $(".english-buttons")
+    var scienceButtons = $(".science-buttons")
 
     // confirm buttons
     var confirm_math = document.querySelector("#confirm-math")
     var confirm_english = document.querySelector("#confirm-english")
     var confirm_science = document.querySelector("#confirm-science")
+    
 
     
     // TODO: create function to clear buttons and replace conditionals
@@ -1031,5 +1041,43 @@ function confirmChoice (buttonPressed) {
 
 
 }
+
+// confirm answer
+function confirm_answer (category) {
+
+    let mathButtons = $(".math-buttons")
+    let englishButtons = $(".english-buttons")
+    let scienceButtons = $(".science-buttons")
+    let confirm_math_button = document.querySelector("#confirm-math")
+    let confirm_english_button = document.querySelector("#confirm-english")
+    let confirm_science_button = document.querySelector("#confirm-science")
+
+    // disable all other options & disable confirm option
+    switch (category) {
+        case "math":    for (let index = 0; index < mathButtons.length; index++) mathButtons[index].toggleAttribute("disabled")            
+                        confirm_math_button.toggleAttribute("disabled")
+            break
+        case "english": for (let index = 0; index < englishButtons.length; index++) englishButtons[index].toggleAttribute("disabled")            
+                        confirm_english_button.toggleAttribute("disabled")
+            break
+        default:        for (let index = 0; index < scienceButtons.length; index++) scienceButtons[index].toggleAttribute("disabled")            
+                        confirm_science_button.toggleAttribute("disabled")
+    }
+
+
+
+    // if all buttons are confirmed then check answers
+    if (confirm_math_button.hasAttribute("disabled") && confirm_english_button.hasAttribute("disabled") && confirm_science_button.hasAttribute("disabled")) {
+        check_answers()
+    }
+
+
+}
+
+// check answers
+function check_answers () {
+
+}
+
 
 $(document).foundation();

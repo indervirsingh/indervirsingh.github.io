@@ -69,7 +69,7 @@
           <div class="card">
             <div class="face face1">
               <div class="content">
-                <button id="confirm-math" class="button primary" disabled>CONFIRM ANSWER</button>
+                <button onclick="confirm_answer('math')" id="confirm-math" class="button primary" disabled>CONFIRM ANSWER</button>
                 <span id="math-question" class="stars"></span>
                 <!-- <h2 class="math">M A T H</h2> -->
                 <!-- <p class="math math-question">What is the square root of 144?</p> -->
@@ -88,7 +88,7 @@
           <div class="card">
             <div class="face face1">
               <div class="content">
-                <button id="confirm-english" class="button primary" disabled>CONFIRM ANSWER</button>
+                <button onclick="confirm_answer('english')" id="confirm-english" class="button primary" disabled>CONFIRM ANSWER</button>
                 <span id="english-question" class="stars"></span>
                 <!-- <h2 class="english">E N G L I S H</h2> -->
                 <!-- <p class="english english-question">How many letters are in the English alphabet?</p> -->
@@ -107,7 +107,7 @@
           <div class="card">
             <div class="face face1">
               <div class="content">
-                <button id="confirm-science" class="button primary" disabled>CONFIRM ANSWER</button>
+                <button onclick="confirm_answer('science')" id="confirm-science" class="button primary" disabled>CONFIRM ANSWER</button>
                 <span id="science-question" class="stars"></span>
                 <!-- <h2 class="science">S C I E N C E</h2> -->
                 <!-- <p class="science science-question">What is the first element of the periodic table?</p> -->
@@ -155,17 +155,17 @@
                         const science_question = `<p class=\"science science-question\">${s1.question}</p>`
 
                         // option elements
-                        const math_option_1 = ` <li><button onclick=\"confirmChoice(this)\" class=\"button secondary math-buttons\"><span class=\"math\">${m1.choices.A}</span></button></li>`
-                        const math_option_2 = ` <li><button onclick=\"confirmChoice(this)\" class=\"button secondary math-buttons\"><span class=\"math\">${m1.choices.B}</span></button></li>`
-                        const math_option_3 = ` <li><button onclick=\"confirmChoice(this)\" class=\"button secondary math-buttons\"><span class=\"math\">${m1.choices.C}</span></button></li>`
+                        const math_option_1 = ` <li><button onclick=\"select_answer(this)\" class=\"button secondary math-buttons\"><span class=\"math\">${m1.choices.A}</span></button></li>`
+                        const math_option_2 = ` <li><button onclick=\"select_answer(this)\" class=\"button secondary math-buttons\"><span class=\"math\">${m1.choices.B}</span></button></li>`
+                        const math_option_3 = ` <li><button onclick=\"select_answer(this)\" class=\"button secondary math-buttons\"><span class=\"math\">${m1.choices.C}</span></button></li>`
 
-                        const english_option_1 = ` <li><button onclick=\"confirmChoice(this)\" class=\"button secondary english-buttons\"><span class=\"english\">${e1.choices.A}</span></button></li>`
-                        const english_option_2 = ` <li><button onclick=\"confirmChoice(this)\" class=\"button secondary english-buttons\"><span class=\"english\">${e1.choices.B}</span></button></li>`
-                        const english_option_3 = ` <li><button onclick=\"confirmChoice(this)\" class=\"button secondary english-buttons\"><span class=\"english\">${e1.choices.C}</span></button></li>`
+                        const english_option_1 = ` <li><button onclick=\"select_answer(this)\" class=\"button secondary english-buttons\"><span class=\"english\">${e1.choices.A}</span></button></li>`
+                        const english_option_2 = ` <li><button onclick=\"select_answer(this)\" class=\"button secondary english-buttons\"><span class=\"english\">${e1.choices.B}</span></button></li>`
+                        const english_option_3 = ` <li><button onclick=\"select_answer(this)\" class=\"button secondary english-buttons\"><span class=\"english\">${e1.choices.C}</span></button></li>`
                         
-                        const science_option_1 = `<li><button onclick=\"confirmChoice(this)\" class=\"button secondary science-buttons\"><span class=\"science\">${s1.choices.A}</span></button></li>`
-                        const science_option_2 = `<li><button onclick=\"confirmChoice(this)\" class=\"button secondary science-buttons\"><span class=\"science\">${s1.choices.B}</span></button></li>`
-                        const science_option_3 = `<li><button onclick=\"confirmChoice(this)\" class=\"button secondary science-buttons\"><span class=\"science\">${s1.choices.C}</span></button></li>`
+                        const science_option_1 = `<li><button onclick=\"select_answer(this)\" class=\"button secondary science-buttons\"><span class=\"science\">${s1.choices.A}</span></button></li>`
+                        const science_option_2 = `<li><button onclick=\"select_answer(this)\" class=\"button secondary science-buttons\"><span class=\"science\">${s1.choices.B}</span></button></li>`
+                        const science_option_3 = `<li><button onclick=\"select_answer(this)\" class=\"button secondary science-buttons\"><span class=\"science\">${s1.choices.C}</span></button></li>`
 
                         // answer elements
                         const math_answer = ` ${m1.correct_answer}`
