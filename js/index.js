@@ -951,9 +951,85 @@ const targetElements = [
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["lBB98","hD4hw"], "hD4hw", "parcelRequire6aa4")
 
 
-
 // confirm button
-function confirmChoice (buttonElement ) {
-    // Change the selected button to RED
-    buttonElement.classList.add("alert")
+function confirmChoice (buttonPressed) {
+    
+    // choices buttons
+    var mathButtons = document.querySelectorAll(".math-buttons")
+    var englishButtons = document.querySelectorAll(".english-buttons")
+    var scienceButtons = document.querySelectorAll(".science-buttons")
+
+    // confirm buttons
+    var confirm_math = document.querySelector("#confirm-math")
+    var confirm_english = document.querySelector("#confirm-english")
+    var confirm_science = document.querySelector("#confirm-science")
+
+    
+    // TODO: create function to clear buttons and replace conditionals
+    if (buttonPressed.classList.contains("alert")) {
+        buttonPressed.classList.remove("alert")
+        buttonPressed.classList.add("clear")
+        
+    }
+    else if (buttonPressed.classList.contains("math-buttons")) {
+
+
+        // First clear other buttons, then toggle the pressed button
+        for (let i = 0; i < mathButtons.length; i++) {
+            mathButtons[i].classList.add("clear")
+            mathButtons[i].classList.remove("alert")
+        }
+
+        // toggle the selected button
+        buttonPressed.classList.toggle("clear")
+        buttonPressed.classList.toggle("alert")
+
+        // Enable confirm button
+        if (buttonPressed.classList.contains("alert")) {
+            confirm_math.toggleAttribute("disabled")
+        }
+
+
+    }
+    else if (buttonPressed.classList.contains("english-buttons")) {
+
+        for (let i = 0; i < englishButtons.length; i++) {
+            englishButtons[i].classList.add("clear")
+            englishButtons[i].classList.remove("alert")
+        }
+        // toggle the selected button
+        buttonPressed.classList.toggle("clear")
+        buttonPressed.classList.toggle("alert")
+
+        // Enable confirm button
+        if (buttonPressed.classList.contains("alert")) {
+            confirm_english.toggleAttribute("disabled")
+        }
+
+        
+    }
+    else if (buttonPressed.classList.contains("science-buttons")) {
+
+        for (let i = 0; i < scienceButtons.length; i++) {
+            scienceButtons[i].classList.add("clear")
+            scienceButtons[i].classList.remove("alert")
+        }
+        // toggle the selected button
+        buttonPressed.classList.toggle("clear")
+        buttonPressed.classList.toggle("alert")
+
+        // Enable confirm button
+        if (buttonPressed.classList.contains("alert")) {
+            confirm_science.toggleAttribute("disabled")
+        }
+
+        
+    }
+
+
+
+
+
 }
+
+$(document).foundation();
