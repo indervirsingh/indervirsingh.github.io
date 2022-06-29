@@ -7,5 +7,7 @@ implement point system(nav menu):
     - bonus points for streaks
     - wager system: bet 5 points, win double or 5 points
 
+    - Display stats for question (instagram polls)
+
 BONUS:
     account for saving data
