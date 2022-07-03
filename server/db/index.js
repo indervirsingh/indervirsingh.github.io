@@ -1,11 +1,13 @@
 const mongoose = require('mongoose')
 
+const url = 'mongodb://localhost:27017/questions'
 mongoose
-    .connect('mongodb://127.0.0.1:8080/questions', { useNewUrlParser: true })
+    .connect(url, { useNewUrlParser: true })
     .catch(e => {
         console.log('Connection error', e.message)
     })
 
 const db = mongoose.connection
+
 
 module.exports = db
