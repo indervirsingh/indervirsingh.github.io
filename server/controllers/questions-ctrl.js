@@ -1,3 +1,4 @@
+const { model } = require('mongoose')
 const Questions = require('../models/questions-model')
 
 createQuestion = (req, res) => {
@@ -189,3 +190,10 @@ getQuestions = async (req, res) => {
 }
 
 
+module.exports = {
+    createQuestion,
+    updateQuestion,
+    deleteQuestion,
+    getQuestions,
+    getQuestionById
+}
