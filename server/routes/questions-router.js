@@ -8,6 +8,6 @@ router.post('/question', QuestionCtrl.createQuestion)
 router.put('/question/:id', QuestionCtrl.updateQuestion)
 router.delete('/question/:id', QuestionCtrl.deleteQuestion)
 router.get('/question/:id', QuestionCtrl.getQuestionById)
-router.get('/question/:id', QuestionCtrl.getQuestions)
+router.get('/questions', QuestionCtrl.getQuestions)
 
 module.exports = router
