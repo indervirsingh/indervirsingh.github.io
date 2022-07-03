@@ -133,8 +133,7 @@ deleteQuestion = async (req, res) => {
 }
 
 getQuestionById = async (req, res) => {
-    // UPDATE
-    await Questions.findOne({ _id: req.params.id }, (err, movie) => {
+    await Questions.findOne({ _id: req.params.id }, (err, question) => {
 
         if (err) {
             return res
@@ -157,8 +156,8 @@ getQuestionById = async (req, res) => {
         return res
                 .status(200)
                 .json({
-                    success:    false,
-                    error:      `Question not found`
+                    success:    true,
+                    error:      question
                 })
 
     }).catch(err => console.log(err))
