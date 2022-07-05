@@ -27,3 +27,4 @@ app.get('/', (req, res) => {
 app.use('/api', questionRouter)
 
 app.listen(apiPort, () => console.log(`Server is running on port ${apiPort}`))
+
