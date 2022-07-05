@@ -1,6 +1,7 @@
 { 
     "MATH": [
         {
+            "category": "math",
             "question": "What is the square root of 64?",
             "choices":
                 {
