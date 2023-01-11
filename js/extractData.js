@@ -20,7 +20,6 @@ fs.readFile(url, 'utf-8', (err, data) => {
     } = jsonData
 
 
-    } = jsonData
 
     // Store questions into separate arrays
     const math_questions = [m1, m2, m3]
