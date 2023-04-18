@@ -1,6 +1,8 @@
 # softwareindi
 
 TODO:
+complete SSL recertification
+
 implement point system(nav menu):
     - one point each correct answer
     - 1-1-1 == 2x points
