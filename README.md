@@ -2,7 +2,7 @@
 
 TODO:
 
-complete SSL recertification - DONE
+complete SSL 'softwareindi.com' - DONE
 
 implement point system(nav menu):
     - one point each correct answer
