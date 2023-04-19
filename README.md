@@ -1,7 +1,9 @@
 # softwareindi
 
 TODO:
-complete SSL recertification
+
+complete SSL recertification - DONE
+
 
 implement point system(nav menu):
     - one point each correct answer
