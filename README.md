@@ -3,7 +3,8 @@
 TODO:
 
 - [DONE] complete SSL 'softwareindi.com'
-- [IN PROGRESS] softwareindi LLC 
+- [IN PROGRESS] softwareindi LLC
+- [IN PROGRESS] express donut digital menu
 
 implement point system(nav menu):
     - one point each correct answer
