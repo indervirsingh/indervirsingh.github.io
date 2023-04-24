@@ -2,7 +2,8 @@
 
 TODO:
 
-complete SSL 'softwareindi.com' - DONE
+- [DONE] complete SSL 'softwareindi.com'
+- [IN PROGRESS] softwareindi LLC 
 
 implement point system(nav menu):
     - one point each correct answer
