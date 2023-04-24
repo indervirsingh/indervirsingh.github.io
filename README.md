@@ -2,7 +2,7 @@
 
 TODO:
 
-- [DONE] complete SSL 'softwareindi.com'
+- [COMPLETED] complete SSL 'softwareindi.com'
 - [IN PROGRESS] softwareindi LLC
 - [IN PROGRESS] express donut digital menu
 
