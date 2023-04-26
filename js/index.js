@@ -1,5 +1,4 @@
 
-
 (function (modules, entry, mainEntry, parcelRequireName, globalName) {
   /* eslint-disable no-undef */
   var globalObject =
