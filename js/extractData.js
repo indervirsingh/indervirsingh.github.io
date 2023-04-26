@@ -4,7 +4,6 @@ const fs = require('fs')
 const url = "../games/questions.json"
 
 
-
 // Read JSON file and extract data
 fs.readFile(url, 'utf-8', (err, data) => {
 
