@@ -6,6 +6,7 @@ TODO:
     - [ ] Password-Generator
     - [ ] WeatherApp
     - [ ] Note-Taker
+    - [x] [Work Day Scheduler](https://www.softwareindi.com/Work-Day-Scheduler/)
 - softwareindi LLC
     - [ ] Documentation/paperwork
 
