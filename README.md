@@ -1,18 +1,16 @@
 # softwareindi
 
-TODO:
+### Website updates
+- Add Projects to site (www.softwareindi.com/)
+    - [ ] [Password Generator](https://www.softwareindi.com/Password-Generator/)
+    - [ ] [Weather App](https://www.softwareindi.com/WeatherApp/)
+    - [ ] Note-Taker
+    - [ ] [Work Day Scheduler](https://www.softwareindi.com/Work-Day-Scheduler/)
+    - [ ] Professional README Generator
 
-- [COMPLETED] complete SSL 'softwareindi.com'
-- [IN PROGRESS] softwareindi LLC
-- [IN PROGRESS] express donut digital menu
+- Implement version updates
+    - [ ] Dependabot configuration
 
-implement point system(nav menu):
-    - one point each correct answer
-    - 1-1-1 == 2x points
-    - bonus points for streaks
-    - wager system: bet 5 points, win double or 5 points
-
-BONUS:
-    account for saving data
-
-
+### Company Updates
+- softwareindi LLC
+    - [ ] Documentation/paperwork
