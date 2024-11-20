@@ -3,7 +3,7 @@
 ### Website updates
 - Add Projects to site (www.softwareindi.com/)
     - [ ] [Password Generator](https://www.softwareindi.com/Password-Generator/)
-    - [ ] [Weather App](https://www.softwareindi.com/WeatherApp/)
+    - [x] [Weather App](https://www.softwareindi.com/WeatherApp/)
     - [ ] Note-Taker
     - [ ] [Work Day Scheduler](https://www.softwareindi.com/Work-Day-Scheduler/)
     - [ ] Professional README Generator
