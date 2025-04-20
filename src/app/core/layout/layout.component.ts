@@ -3,19 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-layout',
   template: `
-    <header>
-      <!-- Header content from existing website -->
-      <nav>
-        <a routerLink="/">Home</a>
-        <a routerLink="/about">About</a>
-        <!-- Add other navigation links -->
-      </nav>
-    </header>
+    <app-header></app-header>
     <main>
       <router-outlet></router-outlet>
     </main>
     <footer>
-      <!-- Footer content from existing website -->
+      <p>&copy; 2023 Your Company</p>
     </footer>
   `,
   styleUrls: ['./layout.component.scss']
