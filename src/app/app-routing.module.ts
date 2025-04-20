@@ -7,15 +7,30 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: '', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) },
-      { path: 'about', loadChildren: () => import('./features/about/about.module').then(m => m.AboutModule) }
+      { 
+        path: '', 
+        loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule),
+        data: { title: 'Home' }
+      },
+      { 
+        path: 'about', 
+        loadChildren: () => import('./features/about/about.module').then(m => m.AboutModule),
+        data: { title: 'About Us' }
+      },
+      {
+        path: '**',
+        redirectTo: '',
+        pathMatch: 'full'
+      }
     ]
-  },
-  { path: '**', redirectTo: '' }
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled',
+    anchorScrolling: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { } 
