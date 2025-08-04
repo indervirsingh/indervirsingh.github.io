@@ -268,6 +268,13 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
     var protocol = HMR_SECURE || location.protocol == 'https:' && !/localhost|127.0.0.1|0.0.0.0/.test(hostname) ? 'wss' : 'ws';
     var ws = new WebSocket(protocol + '://' + hostname + (port ? ':' + port : '') + '/'); // $FlowFixMe
     ws.onmessage = function(event) {
+        // Only allow HMR updates from localhost or 127.0.0.1 in development
+        var isLocal = /^localhost$|^127\.0\.0\.1$|^0\.0\.0\.0$/.test(window.location.hostname);
+        var isDev = typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 'development';
+        if (!isLocal && !isDev) {
+            console.warn('[HMR] Ignoring update from untrusted source:', window.location.hostname);
+            return;
+        }
         checkedAssets = {
         };
         acceptedAssets = {
@@ -399,6 +406,7 @@ function hmrApply(bundle, asset) {
     else if (asset.type === 'js') {
         var deps = asset.depsByBundle[bundle.HMR_BUNDLE_ID];
         if (deps) {
+            // Only execute trusted code (see check above)
             var fn = new Function('require', 'module', 'exports', asset.output);
             modules[asset.id] = [
                 fn,
