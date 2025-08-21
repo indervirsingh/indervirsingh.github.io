@@ -409,15 +409,16 @@ function hmrApply(bundle, asset) {
             // Only execute trusted code (see check above)
             var isLocal = typeof window !== 'undefined' && /^localhost$|^127\.0\.0\.1$|^0\.0\.0\.0$/.test(window.location.hostname);
             var isDev = typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 'development';
-            if (isLocal || isDev) {
-                var fn = new Function('require', 'module', 'exports', asset.output);
-                modules[asset.id] = [
-                    fn,
-                    deps
-                ];
-            } else {
-                console.warn('[HMR] Ignoring JS update from untrusted source:', typeof window !== 'undefined' ? window.location.hostname : 'unknown');
-            }
+            // Disabled dynamic code execution from untrusted sources to prevent code injection.
+            console.warn('[HMR] Dynamic code execution via new Function is disabled for security reasons. Skipping JS update for asset:', asset.id);
+            // If you need to support HMR in development, implement a secure code verification mechanism here.
+            // modules[asset.id] = [
+            //     fn,
+            //     deps
+            // ];
+            // else {
+            //     console.warn('[HMR] Ignoring JS update from untrusted source:', typeof window !== 'undefined' ? window.location.hostname : 'unknown');
+            // }
         } else if (bundle.parent) hmrApply(bundle.parent, asset);
     }
 }
