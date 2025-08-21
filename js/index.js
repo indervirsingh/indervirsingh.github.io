@@ -407,11 +407,17 @@ function hmrApply(bundle, asset) {
         var deps = asset.depsByBundle[bundle.HMR_BUNDLE_ID];
         if (deps) {
             // Only execute trusted code (see check above)
-            var fn = new Function('require', 'module', 'exports', asset.output);
-            modules[asset.id] = [
-                fn,
-                deps
-            ];
+            var isLocal = typeof window !== 'undefined' && /^localhost$|^127\.0\.0\.1$|^0\.0\.0\.0$/.test(window.location.hostname);
+            var isDev = typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 'development';
+            if (isLocal || isDev) {
+                var fn = new Function('require', 'module', 'exports', asset.output);
+                modules[asset.id] = [
+                    fn,
+                    deps
+                ];
+            } else {
+                console.warn('[HMR] Ignoring JS update from untrusted source:', typeof window !== 'undefined' ? window.location.hostname : 'unknown');
+            }
         } else if (bundle.parent) hmrApply(bundle.parent, asset);
     }
 }
