@@ -349,7 +349,7 @@ function createErrorOverlay(diagnostics) {
         _iterator2.f();
     }
     errorHTML += '</div>';
-    overlay.innerHTML = errorHTML;
+    overlay.textContent = errorHTML;
     return overlay;
 }
 function getParents(bundle, id) /*: Array<[ParcelRequire, string]> */ {
