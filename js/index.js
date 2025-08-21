@@ -407,18 +407,32 @@ function hmrApply(bundle, asset) {
         var deps = asset.depsByBundle[bundle.HMR_BUNDLE_ID];
         if (deps) {
             // Only execute trusted code (see check above)
-            var isLocal = typeof window !== 'undefined' && /^localhost$|^127\.0\.0\.1$|^0\.0\.0\.0$/.test(window.location.hostname);
-            var isDev = typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 'development';
-            // Disabled dynamic code execution from untrusted sources to prevent code injection.
-            console.warn('[HMR] Dynamic code execution via new Function is disabled for security reasons. Skipping JS update for asset:', asset.id);
-            // If you need to support HMR in development, implement a secure code verification mechanism here.
-            // modules[asset.id] = [
-            //     fn,
-            //     deps
-            // ];
-            // else {
-            //     console.warn('[HMR] Ignoring JS update from untrusted source:', typeof window !== 'undefined' ? window.location.hostname : 'unknown');
-            // }
+// …existing code…
+
+// Replace the old “skip JS update” block (around lines 410–421) with:
+            // JS HMR is disabled to avoid dynamic code execution. Force a full reload so updates apply safely.
+            console.warn(
+              '[HMR] JS update received but dynamic execution is disabled. Forcing full reload for asset:',
+              asset.id
+            );
+            if (typeof window !== 'undefined' && window.location) {
+              window.location.reload();
+            }
+            return;
+
+// …later, in the assets‐handling section, replace the old `handled` logic with:
+            var hasJs = assets.some(function(asset) {
+              return asset.type === 'js';
+            });
+            var handled = !hasJs && assets.every(function(asset) {
+              return asset.type === 'css';
+            });
+            if (hasJs) {
+              window.location.reload();
+              return;
+            }
+
+// …rest of code…
         } else if (bundle.parent) hmrApply(bundle.parent, asset);
     }
 }
