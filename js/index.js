@@ -1,4 +1,3 @@
-
 (function (modules, entry, mainEntry, parcelRequireName, globalName) {
   /* eslint-disable no-undef */
   var globalObject =
@@ -399,6 +398,21 @@ function reloadCSS() {
         cssTimeout = null;
     }, 50);
 }
+/**
+ * Apply a single HMR asset update to a bundle, handling CSS in-place and forcing full reloads for JS.
+ *
+ * Applies the given HMR asset to the provided bundle: reloads CSS assets via reloadCSS(), and
+ * (by design) prevents dynamic execution of JS updates — logging a warning and triggering a full
+ * page reload when a JS asset is encountered. If the asset is not found on the current bundle,
+ * the function recurses into parent bundles.
+ *
+ * Side effects:
+ * - May call reloadCSS() for CSS updates.
+ * - Logs a warning and forces window.location.reload() for JS updates.
+ *
+ * @param {Object} bundle - The bundle object to apply the asset to; expected to expose a `modules` map and `parent`/HMR_BUNDLE_ID fields used for lookup.
+ * @param {Object} asset - The HMR asset descriptor (e.g., with `type`, `id`, and `depsByBundle`) to apply.
+ */
 function hmrApply(bundle, asset) {
     var modules = bundle.modules;
     if (!modules) return;
@@ -407,11 +421,32 @@ function hmrApply(bundle, asset) {
         var deps = asset.depsByBundle[bundle.HMR_BUNDLE_ID];
         if (deps) {
             // Only execute trusted code (see check above)
-            var fn = new Function('require', 'module', 'exports', asset.output);
-            modules[asset.id] = [
-                fn,
-                deps
-            ];
+// …existing code…
+
+// Replace the old “skip JS update” block (around lines 410–421) with:
+            // JS HMR is disabled to avoid dynamic code execution. Force a full reload so updates apply safely.
+            console.warn(
+              '[HMR] JS update received but dynamic execution is disabled. Forcing full reload for asset:',
+              asset.id
+            );
+            if (typeof window !== 'undefined' && window.location) {
+              window.location.reload();
+            }
+            return;
+
+// …later, in the assets‐handling section, replace the old `handled` logic with:
+            var hasJs = assets.some(function(asset) {
+              return asset.type === 'js';
+            });
+            var handled = !hasJs && assets.every(function(asset) {
+              return asset.type === 'css';
+            });
+            if (hasJs) {
+              window.location.reload();
+              return;
+            }
+
+// …rest of code…
         } else if (bundle.parent) hmrApply(bundle.parent, asset);
     }
 }
